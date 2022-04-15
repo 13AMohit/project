@@ -2,12 +2,12 @@
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
-        "S3bucket": {
+        "S3Bucket": {
             "Type": "AWS::S3::Bucket"
         }
     },
     "Outputs": {
-        "S3bucketName": {
+        "S3bucketname": {
             "Value" : { "Ref" : "S3bucket"}
         }
     }
