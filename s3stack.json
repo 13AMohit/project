@@ -40,7 +40,8 @@
                     }
                 ]
         }
-        },
+        }
+    },
     "Outputs" : {
         "S3bucketName" : {
             "Description" : "S3 bucket name",
@@ -53,4 +54,4 @@
         }
     
 }
-}
+
