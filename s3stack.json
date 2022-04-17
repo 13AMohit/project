@@ -43,7 +43,7 @@
         }
     },
     "Outputs" : {
-        "S3bucketName" : {
+        "S3cfnbucketname" : {
             "Description" : "S3 bucket name",
             "Value" : { "Ref" : "S3Bucket"}
         },
