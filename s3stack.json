@@ -4,12 +4,53 @@
     "Resources": {
         "S3Bucket": {
             "Type": "AWS::S3::Bucket"
+        },
+        "TestIamrole" : {
+            "Type" : "AWS::IAM::Role",
+            "Properties" : {
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com"
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }      
+                    ]},
+                    "Path": "/",
+                "Policies": [
+                    {
+                        "PolicyName": "root",
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Effect": "Allow",
+                                    "Action": "*",
+                                    "Resource": "*"
+                                }
+                            ]
+                        }
+                    }
+                ]
         }
-    },
+        },
     "Outputs" : {
         "S3bucketName" : {
             "Description" : "S3 bucket name",
             "Value" : { "Ref" : "S3Bucket"}
+        },
+        "IamroleNAme" : {
+            "Description" : "Iam role name no cap",
+            "Value" : { "Ref" : "TestIamrole"}
         }
-    }
+        }
+    
+}
 }
