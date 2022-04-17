@@ -19,6 +19,12 @@
 
         }
     }
+},
+"Outputs" : {
+    "SNSTopic" : {
+        "Description" : "SNS topic name no cap",
+        "Value" : { "Ref" : "SNStopic"}
+    }
 }
 
 
