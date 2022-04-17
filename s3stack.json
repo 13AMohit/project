@@ -5,5 +5,11 @@
         "S3Bucket": {
             "Type": "AWS::S3::Bucket"
         }
+    },
+    "Outputs" : {
+        "S3bucketName" : {
+            "Description" : "S3 bucket name",
+            "Value" : { "Ref" : "S3Bucket"}
+        }
     }
 }
