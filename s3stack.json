@@ -10,10 +10,6 @@
         "S3cfnbucketname" : {
             "Description" : "S3 bucket name",
             "Value" : { "Ref" : "S3Bucket"}
-        },
-        "IamroleNAme" : {
-            "Description" : "Iam role name no cap",
-            "Value" : { "Ref" : "TestIamrole"}
         }
         }
     
